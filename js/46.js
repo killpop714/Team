@@ -1,24 +1,69 @@
 import data from './basic.js'
 
-const $P1 =document.querySelector('#p1');
-const $P2 =document.querySelector('#p2');
-const $P3 =document.querySelector('#p3');
-const $P4 =document.querySelector('#p4');
-const $P5 =document.querySelector('#p5');
-const $P6 =document.querySelector('#p6');
+const UserSetInput = document.querySelectorAll(".s")
+const UserInputs = document.querySelectorAll(".p")
+const $btn = document.querySelector("#Next")
 
-data.Datafact($P1,$P2,$P3,$P4,$P5,$P6)
+data.function_46(UserInputs);
 
-
-$P1.addEventListener('input',data.Input)
-$P2.addEventListener('input',data.Input)
-$P3.addEventListener('input',data.Input)
-$P4.addEventListener('input',data.Input)
-$P5.addEventListener('input',data.Input)
-$P6.addEventListener('input',data.Input)
+let oneFlag = false;
+let twoFlag = false;
 
 
-console.log(data.getRandom(1,7));
 
-data.function_46($P1);
+    document.addEventListener('keydown',(key)=>{
 
+        if(key.isComposing) return;
+    
+        if(key.code=="Enter")
+        {
+            if(data.InputSet(UserSetInput)==true){
+                oneFlag = true;
+                BackNext();
+            }  
+            if(data.Inputp(UserInputs)==true)
+            {
+                twoFlag = true;
+                BackNext();
+            }
+        }
+    })
+    
+    
+    document.addEventListener('mousedown',()=>{
+    
+        UserSetInput.forEach((v,i)=>{
+            if(!!UserSetInput[i].value){
+                if(data.InputSet(UserSetInput)==true)
+                {
+                    oneFlag = true;
+                    BackNext();
+                }
+            }
+            
+            if(!!UserInputs[i].value){
+                if(data.Inputp(UserInputs)==true)
+                {
+                    twoFlag = true;
+                    BackNext();
+                }
+            }
+        })
+    })
+
+    function BackNext(){
+
+        console.log(oneFlag)
+        console.log(twoFlag)
+        if(oneFlag==true && twoFlag == true)
+        {
+            document.getElementById("circle").style.display = "block";
+            document.getElementById("circleIcon").style.display = "block";
+            document.getElementById("grayBack").style.display = "block";
+            $btn.style.display = "block"
+        }
+    }
+
+    $btn.addEventListener('click',()=>{
+        location.href ="http://127.0.0.1:5500/47.html";
+    })

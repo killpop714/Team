@@ -28,6 +28,7 @@ html,body{
 
 button{
     position: absolute;
+    display: none;
     content: "";
     z-index: 1;
 }
@@ -131,7 +132,6 @@ label{
     animation-fill-mode: forwards;
 
 } 
-
 h1{
     position: absolute;
     width: 110px;
@@ -143,13 +143,6 @@ h1{
     animation: opacityN 4s ease-out;
     animation-fill-mode: forwards;
 }
-    /* animation: opacityEnable 5s;
-    animation-delay: 3s; */
-/*}h1:hover{
-    display: block;
-    animation: opacityEnable 5s;
-    animation-delay: 3s;
-}*/
 
 @keyframes checkan{
     0%{
