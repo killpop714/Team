@@ -9,8 +9,6 @@ data.function_46(UserInputs);
 let oneFlag = false;
 let twoFlag = false;
 
-
-
     document.addEventListener('keydown',(key)=>{
 
         if(key.isComposing) return;

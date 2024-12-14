@@ -3,9 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img{
+            position: absolute;
+        }
+        #sub{
+            left: 300px;
+            top: 100px;
+
+        }
+        #back{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        input{
+            position: absolute;
+        }
+        h4{
+            position: absolute;
+        }
+
+        
+
+        #Problem1{
+            width: 900px;
+            height: 50px;
+            left: 250px;
+            top: 650px;
+        }
+        .box1{
+            width: 1000px;
+            height: 80px;
+            top: 700px;
+            left: 250px ;
+            position: absolute;
+            border: 1px solid black;
+        }
+
+
+        #pa1{
+            top: 5px;
+            left: 20px;
+        }
+        #pa2{
+            top: 40px;
+            left: 20px;
+        }
+        #m1{
+            top: 40px;
+            left: 150px;
+        }
+
+        #p1{
+            width:80px;
+            left: 100px;
+            top: 5px;
+        }
+        #p2{
+            width:80px;
+            left: 230px;
+            top: 5px;
+        }
+        #p3{
+            width:80px;
+            left: 360px;
+            top: 5px;
+        }
+        #p4{
+            width:80px;
+            left: 490px;
+            top: 5px;
+        }
+        #p5{
+            width:80px;
+            left: 620px;
+            top: 5px;
+        }
+        #p6{
+            width:80px;
+            left: 750px;
+            top: 5px;
+        }
+        #a1{
+            left: 100px;
+            top:40px;
+            width: 30px;
+        }
+
+        #Problem2{
+            width: 900px;
+            height: 50px;
+            left: 250px;
+            top: 830px;
+        }
+        .box2{
+            width: 1000px;
+            height: 130px;
+            top: 880px;
+            left: 250px ;
+            position: absolute;
+            border: 1px solid black;
+        }
+
+        #pa3{
+            top: 5px;
+            left: 20px;
+        }
+        #pa4{
+            top: 40px;
+            left: 20px;
+        }
+        #pa5{
+            top: 80px;
+            left: 20px;
+        }
+        #m2{
+            top: 80px;
+            left: 150px;
+        }
+
+
+        #s{
+            width: 800px;
+            left: 100px;
+            top: 5px;
+        }
+        #r{
+            width: 50px;
+            top: 42px;
+            left: 420px;
+            width: 50px;
+        }
+        #a2{
+            left: 100px;
+            top: 80px;
+            width: 30px;
+        }
+
+
+
+    </style>
+    <link rel="stylesheet" href="css/Check.css">
     <title>Document</title>
 </head>
 <body>
+    <img src="pattern.png" alt=""  height="50" id="back">
+    <img src="substation.jpg" alt="" width="800" height=" 500" id="sub">
     
+    
+    <h4 id="Problem1">1. 선릉역에서 물건을 받아 2호선을 타고 사당역에 가려고 합니다. 선릉역에서 사당역까지 가는 경로와 소요시간을 적어보세요.(각 역마다 소요시간은 2분입니다.)</h4>
+    <div class="box1">
+        <h4 id="pa1">선릉</h4>
+    <input type="text" class="p" id="p1">
+    <input type="text" class="p" id="p2">
+    <input type="text" class="p" id="p3">
+    <input type="text" class="p" id="p4">
+    <input type="text" class="p" id="p5">
+    <input type="text" class="p" id="p6">
+    <h4 id="pa2">소유시간: </h4>
+    <input type="text" id="a1">
+    <h4 id="m1">분 </h4>
+    </div>
+
+    <h4 id="Problem2">2. 3호선 양제역에서 동작역까지 가장 빠르게 갈 수 있는 경로와 환승역과 도착시간을 적어보세요.(각 역마다 소요시간은 2분이고, 환승소요시간은 5분입니다.)</h4>
+    <div class="box2">
+    <h4 id="pa3">양제</h4>
+    <input type="text" id="s">
+    <br>
+     <h4 id="pa4">환승역(다른 노선으로 바꾸어 탈 수 있도록 마련된 역): </h4>
+    <input type="text" id="r">
+    <br>
+    <h4 id="pa5">소유시간: </h4>
+    <input type="text" id="a2">
+    <h4 id="m2">분 </h4>
+    </div>
+
+    <button id="Next"> 다음으로 </button>
+
+    <div id="grayBack"></div>
+
+<div id="circleIcon">
+    <div id="circle"></div>
+    <h1 id="Next_h1">그레잇!</h1>
+</div>
+
+    <script src="js/45.js"></script>
 </body>
 </html>

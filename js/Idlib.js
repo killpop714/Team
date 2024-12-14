@@ -38,7 +38,7 @@ const Login = () =>{
     {
 
         console.log("환영합니다.");
-        location.href = "http://127.0.0.1:5500/problems/42.html"
+        location.href = "http://127.0.0.1:5500/44.html"
 
     }else if(Id_data==null||Pw_data==null){
         alert("값이 비어있습니다.")
@@ -48,4 +48,4 @@ const Login = () =>{
 
 }
 
-export default{Id_Input,Pw_Input,Signup,Login,Flowers};
+export default{Id_Input,Pw_Input,Signup,Login,};

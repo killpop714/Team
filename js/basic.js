@@ -72,6 +72,9 @@ const InputSet = ((event)=>
         return true;
 })
 
+const Input = ((e)=>{
+
+}) 
 
 
 export default{Inputp,function_46,InputSet};

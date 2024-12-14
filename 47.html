@@ -4,89 +4,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/Check.css">
+    <style>
+        #back{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+#Flower_Img{
+   
+    width: 256px;
+    height: 60px;
+    left: 350px;
+    top: 80px;
+}
+#Problem{
+    position: absolute;
+    left: 400px;
+    top: 135px;
+}
+#line{
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    width: 100px;
+    height: 4vh;
+    background-color: black;
+    transform: rotate(0);
+}
+h1{
+    position: absolute;
+    color: black;
+}
+img{
+    position: absolute;
+}
+h1:nth-child(1){
+    left: 100px;
+    top: 200px;
+}
+
+
+#pro1{
+    left: 400px;
+    top: 200px;
+}
+#pro2{
+    left: 400px;
+    top: 300px;
+}
+#pro3{
+    left: 400px;
+    top: 400px;
+}
+#pro4{
+    left: 400px;
+    top: 500px;
+}
+#pro5{
+    left: 400px;
+    top: 600px;
+}
+#pro6{
+    left: 400px;
+    top: 700px;
+}
+
+
+#f1{
+    left: 180px;
+    top: 160px;
+}
+#f2{
+    left: 180px;
+    top: 260px;
+}
+#f3{
+    left: 180px;
+    top: 360px;
+}
+#f4{
+    left: 180px;
+    top: 460px;
+}
+#f5{
+    left: 180px;
+    top: 560px;
+}
+#f6{
+    left: 180px;
+    top: 660px;
+}
+
+
+#p1{
+    left:1000px;
+    top: 200px;
+}
+#p2{
+    left: 1000px;
+    top: 300px;
+}
+#p3{
+    left: 1000px;
+    top: 400px;
+}
+#p4{
+    left: 1000px;
+    top: 500px;
+}
+#p5{
+    left: 1000px;
+    top: 600px;
+}
+#p6{
+    left: 1000px;
+    top: 700px;  
+}
+
+
+
+#l1{
+    left: 1100px;
+    top: 180px;
+}
+#l2{
+    left: 1100px;
+    top: 280px;
+}
+#l3{
+    left: 1100px;
+    top: 380px;
+}
+#l4{
+    left: 1100px;
+    top: 480px;
+}
+#l5{
+    left: 1100px;
+    top: 580px;
+}
+#l6{
+    left: 1100px;
+    top: 680px;
+}
+    </style>
 </head>
 <body>
-    <div>
-        <canvas width="1900" height="1000"></canvas>
-        <img src="pngegg.png" alt="" width="10" height="10" class="p" id="pro1">
-        <img src="pngegg.png" alt="" width="10" height="10"class="p" id="pro2">
-        <img src="pngegg.png" alt="" width="10" height="10"class="p" id="pro3">
-        <img src="pngegg.png" alt="" width="10" height="10"class="p" id="pro4">
-        <img src="pngegg.png" alt="" width="10" height="10"class="p" id="pro5">
-        <img src="pngegg.png" alt="" width="10" height="10"class="p" id="pro6">
-        <br>
-        <img src="pngegg.png" alt="" width="10" height="10"class="p1" id="p1">
-        <img src="pngegg.png" alt="" width="10" height="10"class="p1" id="p2">
-        <img src="pngegg.png" alt="" width="10" height="10"class="p1"id="p3">
-        <img src="pngegg.png" alt="" width="10" height="10"class="p1"id="p4">
-        <img src="pngegg.png" alt="" width="10" height="10"class="p1"id="p5">
-        <img src="pngegg.png" alt="" width="10" height="10"class="p1"id="p6">
+
+    <img src="Flower_Img.png" alt="꽃" id="Flower_Img">
+    <img src="pattern.png" alt=""  height="50" id="back">
+    <h4 id="Problem">앞서 기억해 두었던 꽃과 꽃말을 연결해보세요.</h4>
+    <div><canvas width="1300" height="738.4"></canvas></div>
+    <img src="pngegg.png" alt="" width="10" height="10" class="p" id="pro1">
+    <img src="pngegg.png" alt="" width="10" height="10"class="p" id="pro2">
+    <img src="pngegg.png" alt="" width="10" height="10"class="p" id="pro3">
+    <img src="pngegg.png" alt="" width="10" height="10"class="p" id="pro4">
+    <img src="pngegg.png" alt="" width="10" height="10"class="p" id="pro5">
+    <img src="pngegg.png" alt="" width="10" height="10"class="p" id="pro6">
+
+    <img src="pngegg.png" alt="" width="10" height="10"class="p1" id="p1">
+    <img src="pngegg.png" alt="" width="10" height="10"class="p1" id="p2">
+    <img src="pngegg.png" alt="" width="10" height="10"class="p1"id="p3">
+    <img src="pngegg.png" alt="" width="10" height="10"class="p1"id="p4">
+    <img src="pngegg.png" alt="" width="10" height="10"class="p1"id="p5">
+    <img src="pngegg.png" alt="" width="10" height="10"class="p1"id="p6">
+
+    <img src="Flowers1.jpg" alt="" width="200" height="95" id="f1" >
+    <img src="Flowers2.jpg" alt="" width="200" height="95" id="f2" >
+    <img src="Flowers3.jpg" alt="" width="200" height="95" id="f3" >
+    <img src="Flowers4.jpg" alt="" width="200" height="95" id="f4" >
+    <img src="Flowers5.jpg" alt="" width="200" height="95" id="f5" >
+    <img src="Flowers6.jpg" alt="" width="200" height="95" id="f6" >
+
+    <h1 class="l"id="l1" >실험중</h1>
+    <h1 class="l" id="l2">test</h1>
+    <h1 class="l" id="l3">test</h1>
+    <h1 class="l" id="l4">test</h1>
+    <h1 class="l" id="l5">test</h1>
+    <h1 class="l" id="l6">test</h1>
 
         
 
 
-        <div id="line"></div>
-    </div>
-    <style>
-        #line{
-            position: absolute;
-            left: 0;
-            width: 100px;
-            height: 2vh;
-            background-color: red;
-        }
-        img{
-            position: absolute;
-        }
-        #pro1{
-            left: 100px;
-            top: 100px;
-        }
-        #pro2{
-            left: 100px;
-            top: 200px;
-        }
-        #pro3{
-            left: 100px;
-            top: 300px;
-        }
-        #pro4{
-            left: 100px;
-            top: 400px;
-        }
-        #pro5{
-            left: 100px;
-            top: 500px;
-        }
-        #pro6{
-            left: 100px;
-            top: 600px;
-        }
-        #p1{
-            left: 600px;
-            top: 100px;
-        }
-        #p2{
-            left: 600px;
-            top: 200px;
-        }
-        #p3{
-            left: 600px;
-            top: 300px;
-        }
-        #p4{
-            left: 600px;
-            top: 400px;
-        }
-        #p5{
-            left: 600px;
-            top: 500px;
-        }
-        #p6{
-            left: 600px;
-            top: 600px;
-        }
-    </style>
+    <button id="Next"> 다음으로 </button>
+
+    <div id="grayBack"></div>
+
+<div id="circleIcon">
+    <div id="circle"></div>
+    <h1 id="Next_h1">그레잇!</h1>
+</div>
+
     <script src="js/47.js"></script>
 </body>
 </html>
