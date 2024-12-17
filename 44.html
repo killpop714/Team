@@ -12,6 +12,16 @@
         .f{
             position: absolute;
         }
+        #pro{
+            position: absolute;
+            left: 1050px;
+            top: 50px;
+        }
+        #F{
+            position: absolute;
+            left: 1030px;
+
+        }
 
         #f1{
             left: 25px;
@@ -44,6 +54,8 @@
 <body>
 
 
+    <h2 id="pro">꽃의 이름과 꽃말을 읽고 기억해보세요.</h2>
+    <img src="Flower_Img.png" alt="꽃 이미지" id="F">
     <img src="list1.jpg" alt=""width="500" height="300">
     <img src="list4.jpg" alt=""width="500" height="300">
     <img src="list2.jpg" alt=""width="500" height="300">
@@ -66,6 +78,6 @@
     <button onclick=Next()>다음으로</button>
 </body>
 <script>
-    const Next=() =>location.href ="http://127.0.0.1:5500/45.html"
+    const Next=() =>location.replace("http://127.0.0.1:5500/45.html")
 </script>
 </html>

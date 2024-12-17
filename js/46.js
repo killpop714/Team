@@ -103,5 +103,5 @@ const Flowers =[{name:"철쭉",language:"사랑의 즐거움",position:"강원�
     
 
     $btn.addEventListener('click',()=>{
-        location.href ="http://127.0.0.1:5500/47.html";
+        location.replace("http://127.0.0.1:5500/47.html")
     })

@@ -142,7 +142,7 @@ function GetRandList(count,max,min=1){
 }
 
 document.querySelector("#Next").addEventListener('click',()=>{
-    location.href = "http://127.0.0.1:5500/48.html";
+    location.replace("http://127.0.0.1:5500/48.html");
 })
 
 
