@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꽃 기억하기</title>
+    <style>
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .map-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .map {
+            width: 300px;
+            margin: 0 auto;
+        }
+        .input-container {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">꽃 기억하기</h1>
+    <p style="text-align: center;">아래 빈칸에 해당 지역의 꽃 이름을 작성해 보세요.</p>
+    
+    <table>
+        <tr>
+            <th>강원도</th>
+            <th>경기도</th>
+            <th>충청도</th>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="꽃 이름 입력"></td>
+            <td><input type="text" placeholder="꽃 이름 입력"></td>
+            <td><input type="text" placeholder="꽃 이름 입력"></td>
+        </tr>
+        <tr>
+            <th>전라도</th>
+            <th>경상도</th>
+            <th>제주도</th>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="꽃 이름 입력"></td>
+            <td><input type="text" placeholder="꽃 이름 입력"></td>
+            <td><input type="text" placeholder="꽃 이름 입력"></td>
+        </tr>
+    </table>
+
+    <div class="map-container">
+        <h2>지역 지도</h2>
+        <img src="map-placeholder.png" alt="지역 지도" class="map">
+        <div class="input-container">
+            <p>지도에 표시된 지역별로 입력란이 있습니다.</p>
+        </div>
+    </div>
+</body>
+</html>
