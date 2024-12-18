@@ -29,11 +29,74 @@
         .input-container {
             margin-top: 10px;
         }
+
+        #a1,#a2,#a3,#a4,#a5,#a6{
+            position: absolute;
+        }
+        #a1{
+            width: 120px;
+            height: 30px;
+            left: 51.8vw;
+            top: 55vh;
+        }
+        #a2{
+            width: 120px;
+            height: 30px;
+            left: 51.8vw;
+            top: 60vh;
+        }
+        #a3{
+            width: 120px;
+            height: 30px;
+            left: 51.8vw;
+            top: 65vh;
+        }
+        #a4{
+            width: 120px;
+            height: 30px;
+            left: 51.8vw;
+            top: 70vh;
+        }
+        #a5{
+            width: 120px;
+            height: 30px;
+            left: 51.8vw;
+            top: 75vh;
+        }
+        #a6{
+            width: 120px;
+            height: 30px;
+            left: 51.8vw;
+            top: 80vh;
+        }
+        #grayBack:after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100vh;
+    opacity: 0.6;
+    place-items: center;
+    background-color: rgb(80, 80, 80);
+
+
+    animation: back 1s ease-out;
+}
     </style>
 </head>
 <body>
     <h1 style="text-align: center;">꽃 기억하기</h1>
     <p style="text-align: center;">아래 빈칸에 해당 지역의 꽃 이름을 작성해 보세요.</p>
+
+
+    <input type="text" class="a" id="a1">
+    <input type="text" class="a" id="a2">
+    <input type="text" class="a" id="a3">
+    <input type="text" class="a" id="a4">
+    <input type="text" class="a" id="a5">
+    <input type="text" class="a" id="a6">
     
     <table>
         <tr>
@@ -60,7 +123,7 @@
 
     <div class="map-container">
         <h2>지역 지도</h2>
-        <img src="Map.png" alt="지역 지도" class="map">
+        <img src="Map2.jpg" alt="지역 지도" class="map">
         <div class="input-container">
             <p>지도에 표시된 지역별로 입력란이 있습니다.</p>
         </div>
@@ -75,9 +138,11 @@
     <div id="circle"></div>
     <h1 id="Next_h1">그레잇!</h1>
 
+
 </div>
     <script>
-
+           
+        const Inputs = document.querySelectorAll(".a")
         const UserInputs = document.querySelectorAll(".p")
         const $btn = document.querySelector("#Next")
 
@@ -132,6 +197,7 @@
                         {
                             Check2++;
                             Checkp= true;
+                            Inputs[i].value = v.value;
                         }
                         else if(!v.value){
                             console.log("값이 비었습니다")
@@ -144,6 +210,7 @@
                     if(Checkp==false){
                         alert("다른 내용을 적었습니다.");
                         v.value="";
+                        Inputs[i].value = ""
                     }
                         BackNext();
                 }

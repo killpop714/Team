@@ -35,11 +35,9 @@ html,body{
     content: "";
     left: 0;
     top: 0;
-    content: "";
-    width: 100%;
+    width: 100vw;
     height: 150vh;
     opacity: 0.6;
-    place-items: center;
     background-color: rgb(80, 80, 80);
 
 

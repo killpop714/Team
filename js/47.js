@@ -114,7 +114,7 @@ const drawLine = (event) =>{
     d.beginPath();
     d.strokeStyle = 'black'
     d.moveTo(Line[Chose].left-101,Line[Chose].top+5);
-    d.lineTo(event.clientX-103,event.clientY+2)
+    d.lineTo(event.clientX-103,event.clientY)
     d.stroke()
 }
 
