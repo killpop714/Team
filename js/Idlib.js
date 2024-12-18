@@ -21,7 +21,7 @@ const Signup = () =>{
         Id.setItem('Id',Id_data);
         password.setItem('Pw',Pw_data);
         console.log("데이터 저장 완료");
-        location.href = "http://127.0.0.1:5500/title.html"
+        location.replace("http://127.0.0.1:5500/title.html")
 
     }else if(Id_data==null||Pw_data==null){
         alert("값이 비어있습니다.")
@@ -38,7 +38,7 @@ const Login = () =>{
     {
 
         console.log("환영합니다.");
-        location.href = "http://127.0.0.1:5500/44.html"
+        location.replace("http://127.0.0.1:5500/41p.%EC%8B%9C%EA%B3%84.html")
 
     }else if(Id_data==null||Pw_data==null){
         alert("값이 비어있습니다.")

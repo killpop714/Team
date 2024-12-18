@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시간 입력과 시계</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            /* text-align: center; */
+        }
+        button{
+            position: absolute;
+            right: 10%;
+            width: 100px;
+            height: 60px;
+        }
+        table{
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+        #date{
+            width: 150px;
+        }
+
+        .time-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            width: 300px;
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        .time-box div {
+            margin: 0 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 50px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .clock {
+            margin: 30px auto;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .clock::before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: black;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .clock div {
+            position: absolute;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .clock .number-12 { top: 5px; left: 50%; transform: translateX(-50%); }
+        .clock .number-3 { right: 5px; top: 50%; transform: translateY(-50%); }
+        .clock .number-6 { bottom: 5px; left: 50%; transform: translateX(-50%); }
+        .clock .number-9 { left: 5px; top: 50%; transform: translateY(-50%); }
+
+        
+        #tick{
+            width: 2px;
+            height: 80px;
+            background: black;
+            position: absolute;
+            top: calc(50% - 80px);
+            left: calc(50% - 1px);
+            transform-origin: bottom;
+        }
+        #h{
+            width: 5px;
+            height: 40px;
+            background: black;
+            position: absolute;
+            top: calc(50% - 40px);
+            left: calc(50% - 2.4px);
+            transform-origin: bottom;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h2>오늘의 날짜와 날씨</h2>
+        <form>
+            <div class="date-input">
+                <label for="date">오늘의 날짜: </label>
+                <input type="date" id="date" name="date">
+            </div>
+            <div class="weather-icons">
+                <label>
+                    <input type="radio" name="weather" value="sunny">
+                    ☀️ 맑음
+                    <input type="radio" name="weather" value="cloudy">
+                    ⛅ 흐림
+                    <input type="radio" name="weather" value="overcast">
+                    ☁️ 비
+                    <input type="radio" name="weather" value="rainy">
+                    🌧️ 눈
+                </label>
+            </div>
+        </form>
+    </div>
+    <br>
+    <h1>현재 시각 입력 및 시계</h1>
+    <p>현재 시각을 입력하고 오른쪽 시계 안에 시간을 그려보세요.</p>
+
+    <div class="time-box">
+        <div>
+            <label for="ampm">오전/오후</label>
+            <select id="ampm">
+                <option value="am">오전</option>
+                <option value="pm">오후</option>
+            </select>
+        </div>
+        <div>
+            <label for="hours">시</label>
+            <input type="number" id="hours" min="1" max="12" placeholder="12">
+        </div>
+        <div>
+            <label for="minutes">분</label>
+            <input type="number" id="minutes" min="0" max="59" placeholder="00">
+        </div>
+    </div>
+
+    <div class="clock">
+        <div class="number-12">12</div>
+        <div class="number-3">3</div>
+        <div class="number-6">6</div>
+        <div class="number-9">9</div>
+
+
+        <div id="tick"></div>
+        <div id="h"></div>
+    </div>
+
+    <h3>꽃 이름 기억하기</h3>
+<p>다음은 6가지 꽃입니다. 6가지 꽃 사진을 확인하며 이름을 외워봅시다.</p>
+<img src="Flower_Img.png" alt="">
+<table class="flowers-table">
+   <tr>
+    <th><img src="Flowers1.jpg" alt="" width="300" height="200"></th>
+    <th><img src="Flowers2.jpg" alt="" width="300" height="200"></th>
+    <th><img src="Flowers3.jpg" alt="" width="300" height="200"></th>
+   </tr>
+    <tr>
+        <td>철쭉</td>
+        <td>개나리</td>
+        <td>백목련</td>
+    </tr>
+    <tr>
+        <th><img src="Flowers4.jpg" alt="" width="300" height="200"></th>
+        <th><img src="Flowers5.jpg" alt="" width="300" height="200"></th>
+        <th><img src="Flowers6.jpg" alt="" width="300" height="200"></th>
+    </tr>
+    <tr>
+        <td>백일홍</td>
+        <td>장미</td>
+        <td>참꽃</td>
+    </tr>
+</table>
+</div>
+<button id="Next"> 다음으로 </button>
+    <script>
+        const $hr = document.getElementById("hours");
+        const $min = document.getElementById("minutes");
+        const tick = document.getElementById("tick").style
+        const h = document.getElementById("h").style
+        const $btn = document.getElementById("Next")
+        const $data = document.getElementById("date")
+
+        $min.addEventListener('click',()=>{
+            console.log($min.value)
+            let mindeg = 6 * $min.value;
+            tick.transform = `rotate(${mindeg}deg)`;
+        })
+
+        $hr.addEventListener('click',()=>{
+            let hrdeg = 30 * $hr.value;
+            h.transform = `rotate(${hrdeg}deg)`;
+        })
+
+        $btn.addEventListener('click',()=>{
+            if($hr.value >0 &&  $min.value >=0 && $data.value)
+            location.replace("http://127.0.0.1:5500/42p.%EC%A7%80%EB%8F%84%EA%BD%83.html");
+            else
+            alert("값을 넣어주세요");
+        })
+    </script>
+</body>
+</html>

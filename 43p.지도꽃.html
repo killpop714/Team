@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>꽃 기억하기</title>
+    <link rel="stylesheet" href="css/Check.css">
+    <style>
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .map-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .map {
+            width: 300px;
+            margin: 0 auto;
+        }
+        .input-container {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">꽃 기억하기</h1>
+    <p style="text-align: center;">아래 빈칸에 해당 지역의 꽃 이름을 작성해 보세요.</p>
+    
+    <table>
+        <tr>
+            <th>강원도</th>
+            <th>경기도</th>
+            <th>충청도</th>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="꽃 이름 입력" class="p"></td>
+            <td><input type="text" placeholder="꽃 이름 입력" class="p"></td>
+            <td><input type="text" placeholder="꽃 이름 입력" class="p"></td>
+        </tr>
+        <tr>
+            <th>전라도</th>
+            <th>경상도</th>
+            <th>제주도</th>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="꽃 이름 입력" class="p"></td>
+            <td><input type="text" placeholder="꽃 이름 입력" class="p"></td>
+            <td><input type="text" placeholder="꽃 이름 입력" class="p"></td>
+        </tr>
+    </table>
+
+    <div class="map-container">
+        <h2>지역 지도</h2>
+        <img src="Map.png" alt="지역 지도" class="map">
+        <div class="input-container">
+            <p>지도에 표시된 지역별로 입력란이 있습니다.</p>
+        </div>
+    </div>
+
+
+    <button id="Next"> 다음으로 </button>
+
+<div id="grayBack"></div>
+
+<div id="circleIcon">
+    <div id="circle"></div>
+    <h1 id="Next_h1">그레잇!</h1>
+
+</div>
+    <script>
+
+        const UserInputs = document.querySelectorAll(".p")
+        const $btn = document.querySelector("#Next")
+
+        const Flowers =[{name:"철쭉",language:"사랑의 즐거움",position:"강원도"},{name:"개나리",language:"희망",position:"경기도"},
+        {name:"백목련",language:"이루지 못할 사랑",position:"충청도"}, {name:"백일홍",language:"행복",position:"전라도"},
+        {name:"장미",language:"사랑",position:"경상도"},{name:"참꽃",language:"다정",position:"제주도"}]
+    
+        let Check1 =0;
+        let Check2 =0;
+        let Checkp =false;
+    
+    
+        document.addEventListener('keydown',(key)=>{
+    
+             if(key.isComposing) return;
+        
+            if(key.code=="Enter")
+            {
+                DataCheck();
+            }
+        })
+        
+        
+        document.addEventListener('mousedown',()=>{
+            DataCheck();
+        
+        })
+    
+    
+        function BackNext(){
+    
+            if(Check2==6)
+            {
+                document.getElementById("circle").style.display = "block";
+                document.getElementById("circleIcon").style.display = "block";
+                document.getElementById("grayBack").style.display = "block";
+                document.getElementById("Next").style.display = "block"
+            }
+        }
+    
+        const DataCheck = () =>{
+            Check2 =0;
+            let UseV= [];
+    
+            
+            UserInputs.forEach((v)=>{
+                Checkp =false;
+                if(!!v.value){
+                    for(let i=0; i<6; i++)
+                    {
+                        if(Flowers[i].name == v.value)
+                        {
+                            Check2++;
+                            Checkp= true;
+                        }
+                        else if(!v.value){
+                            console.log("값이 비었습니다")
+                            return;
+                        }
+                
+                        else    console.log("다른 값")
+                    }
+    
+                    if(Checkp==false){
+                        alert("다른 내용을 적었습니다.");
+                        v.value="";
+                    }
+                        BackNext();
+                }
+            })
+        }
+        $btn.addEventListener('click',()=>{
+        location.replace("http://127.0.0.1:5500/44.html")
+    })
+        </script>
+</body>
+</html>
