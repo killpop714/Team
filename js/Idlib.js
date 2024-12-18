@@ -38,7 +38,7 @@ const Login = () =>{
     {
 
         console.log("환영합니다.");
-        location.replace("http://127.0.0.1:5500/41p.%EC%8B%9C%EA%B3%84.html")
+        location.replace("http://127.0.0.1:5500/42p.%EC%8B%9C%EA%B3%84.html")
 
     }else if(Id_data==null||Pw_data==null){
         alert("값이 비어있습니다.")
